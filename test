@@ -1,0 +1,10 @@
+python3 -m pytest test/test_dbbootstrapper_glue.py::test_create_schema_and_tables --env dlgsbox -vv -v -s
+
+
+echo "alias dlgsandbox1='aws-mfa --device arn:aws:iam::806648171439:mfa/gnbc --assume-role arn:aws:iam::355466909524:role/dlg_dlgsbox01_Admin_Role --duration 43200'" >> ~/.zshrc
+. ~/.zshrc
+
+source ~/.zshrc
+
+dlgsandbox1
+
